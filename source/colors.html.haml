@@ -1,0 +1,11 @@
+---
+colors:
+  light: '#EAEFFF'
+  pale: '#FFE2AD'
+  peach: '#F29696'
+  navy: '#1A3857'
+  dark: '#090B0E'
+---
+
+- current_resource.data.colors.each do |name, code|
+  .row{ style: "background-color: #{code};" }

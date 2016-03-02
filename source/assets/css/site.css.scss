@@ -1,0 +1,77 @@
+$white: #fff;
+// $light: #fef7ff;
+// $peach: #ffaCa4;
+// $navy:  #262959;
+
+$light: #EAEFFF;
+$pale: #FFE2AD;
+$peach: #F29696;
+$navy: #1A3857;
+$dark: #090B0E;
+
+@import 'normalize';
+@import 'type';
+
+html,
+body {
+  background: $light;
+  color: $navy;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+  color: $peach;
+  font-style: italic;
+}
+
+h1, h2, h3 {
+  font-family: 'Sacramento', serif;
+  font-weight: normal;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.i {
+  font-style: italic;
+}
+
+.mtb0 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.row {
+  display: block;
+  padding: 10vh;
+}
+
+.hr {
+  background: rgba( $peach, 0.5 );
+  height: 3px;
+
+  width: 3em;
+  margin: 3em auto;
+}
+
+.col {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.span1of1 { width: percentage(1); }
+.span1of2 { width: percentage(1/2); }
+.span1of3 { width: percentage(1/3); }
+.span2of3 { width: percentage(2/3); }
+
+.align-center { text-align: center; }
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 95vh;
+}

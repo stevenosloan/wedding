@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Sacramento);
+$sacramento: 'Sacramento', serif;
+$times: 'Times New Roman', Times, serif;
+
+$super_title-font: $sacramento;
+$super_title-weight: normal;
+$super_title-size: 90px;
+$super_title-line: 90/90;
+
+
+$title-font: $sacramento;
+$title-weight: normal;
+$title-size: 40px;
+$title-line: 40/40;
+
+$heading-font: $title-font;
+$heading-weight: $title-weight;
+$heading-size: 26px;
+$heading-line: 30/26;
+
+$body-font: $times;
+$body-weight: normal;
+$body-size: 16px;
+$body-line: 20/16;
+
+
+//- colors
+$type-dark: $navy;
+$type-mid: mix( $light, $navy, 20% );
+$type-pop: #ff8f85;
+
+.super_title {
+  font-family: $super_title-font;
+  font-weight: $super_title-weight;
+  font-size: $super_title-size;
+  line-height: $super_title-line;
+  color: $type-dark;
+  margin-top: .125em;
+  margin-bottom: -.125em;
+
+  a {
+    color: $type-dark;
+  }
+}
+
+.title {
+  font-family: $title-font;
+  font-weight: $title-weight;
+  font-size: $title-size;
+  line-height: $title-line;
+  color: $type-dark;
+
+  text-decoration: none;
+}
+
+.title {
+  font-family: $title-font;
+  font-weight: $title-weight;
+  font-size: $title-size;
+  line-height: $title-line;
+  color: $type-dark;
+
+  text-decoration: none;
+}
+
+.heading {
+  font-family: $heading-font;
+  font-weight: $heading-weight;
+  font-size: $heading-size;
+  line-height: $heading-line;
+  color: $type-dark;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 1em;
+    margin: 36px auto;
+    border-bottom: 1px solid mix( $light, $type-mid, 80% );
+  }
+}
+
+.body {
+  font-family: $body-font;
+  font-size: $body-size;
+  line-height: $body-line;
+  color: $type-mid;
+
+  a {
+    color: $type-pop;
+  }
+}
