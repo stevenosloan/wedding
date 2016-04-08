@@ -1,13 +1,12 @@
 $white: #fff;
-// $light: #fef7ff;
-// $peach: #ffaCa4;
-// $navy:  #262959;
-
 $light: #EAEFFF;
 $pale: #FFE2AD;
 $peach: #F29696;
 $navy: #1A3857;
 $dark: #090B0E;
+
+$baseline: 6px;
+$gutter: $baseline*3;
 
 @import 'normalize';
 @import 'type';
@@ -22,6 +21,13 @@ body {
 a {
   color: $peach;
   font-style: italic;
+
+  &.secret {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 h1, h2, h3 {
@@ -42,9 +48,19 @@ h1, h2, h3 {
   margin-bottom: 0 !important;
 }
 
+.mb0 { margin-bottom: 0 !important }
+.mb1 { margin-bottom: $baseline !important }
+.mb2 { margin-bottom: $baseline*2 !important }
+.mb3 { margin-bottom: $baseline*3 !important }
+
+.mt0 { margin-top: 0 !important }
+.mt1 { margin-top: $baseline !important }
+.mt2 { margin-top: $baseline*2 !important }
+.mt3 { margin-top: $baseline*3 !important }
+
 .row {
   display: block;
-  padding: 10vh;
+  padding: 5vh 0;
 }
 
 .hr {
@@ -55,9 +71,27 @@ h1, h2, h3 {
   margin: 3em auto;
 }
 
-.col {
+.block {
   display: inline-block;
   box-sizing: border-box;
+
+  &.middle {
+    vertical-align: middle;
+  }
+
+  &.top {
+    vertical-align: top;
+  }
+
+  &.center {
+    text-align: center;
+  }
+}
+
+.col {
+  @extend .block;
+  padding-left: $gutter;
+  padding-right: $gutter;
 }
 
 .span1of1 { width: percentage(1); }
@@ -74,4 +108,12 @@ h1, h2, h3 {
   justify-content: center;
 
   min-height: 95vh;
+}
+
+
+#header {
+  height: 66vmin;
+  min-height: 52vw;
+  background-size: cover;
+  background-position: center center;
 }

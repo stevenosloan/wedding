@@ -10,13 +10,18 @@ $super_title-line: 90/90;
 
 $title-font: $sacramento;
 $title-weight: normal;
-$title-size: 40px;
-$title-line: 40/40;
+$title-size: 60px;
+$title-line: 60/60;
 
 $heading-font: $title-font;
 $heading-weight: $title-weight;
-$heading-size: 26px;
-$heading-line: 30/26;
+$heading-size: 40px;
+$heading-line: 40/40;
+
+$subheading-font: $title-font;
+$subheading-weight: $title-weight;
+$subheading-size: 26px;
+$subheading-line: 30/26;
 
 $body-font: $times;
 $body-weight: normal;
@@ -53,16 +58,6 @@ $type-pop: #ff8f85;
   text-decoration: none;
 }
 
-.title {
-  font-family: $title-font;
-  font-weight: $title-weight;
-  font-size: $title-size;
-  line-height: $title-line;
-  color: $type-dark;
-
-  text-decoration: none;
-}
-
 .heading {
   font-family: $heading-font;
   font-weight: $heading-weight;
@@ -70,13 +65,21 @@ $type-pop: #ff8f85;
   line-height: $heading-line;
   color: $type-dark;
 
-  &::before {
-    content: '';
-    display: block;
-    width: 1em;
-    margin: 36px auto;
-    border-bottom: 1px solid mix( $light, $type-mid, 80% );
-  }
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: 1em;
+  //   margin: 36px auto;
+  //   border-bottom: 1px solid mix( $light, $type-mid, 80% );
+  // }
+}
+
+.subheading {
+  font-family: $heading-font;
+  font-weight: $heading-weight;
+  font-size: $heading-size;
+  line-height: $heading-line;
+  color: $type-dark;
 }
 
 .body {
