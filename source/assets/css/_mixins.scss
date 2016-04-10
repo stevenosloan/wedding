@@ -1,0 +1,9 @@
+@mixin when_outputting($block_output: null) {
+  @if $block_output == null {
+    $block_output: $output;
+  }
+
+  @if $block_output {
+    @content;
+  }
+}

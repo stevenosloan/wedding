@@ -1,0 +1,139 @@
+$base: true !default;
+$desktop: false !default;
+
+@include when_outputting($base) {
+  html,
+  body {
+    background: $light;
+    color: $navy;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
+@include when_outputting($base) {
+  a {
+    color: $peach;
+    font-style: italic;
+
+    &.secret {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  h1, h2, h3 {
+    font-family: 'Sacramento', serif;
+    font-weight: normal;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+@include when_outputting($base) {
+  .i {
+    font-style: italic;
+  }
+
+  .mtb0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .mb0 { margin-bottom: 0 !important }
+  .mb1 { margin-bottom: $baseline !important }
+  .mb2 { margin-bottom: $baseline*2 !important }
+  .mb3 { margin-bottom: $baseline*3 !important }
+
+  .mt0 { margin-top: 0 !important }
+  .mt1 { margin-top: $baseline !important }
+  .mt2 { margin-top: $baseline*2 !important }
+  .mt3 { margin-top: $baseline*3 !important }
+}
+
+@include when_outputting($base) {
+  .row {
+    display: block;
+    padding: 5vmin 0;
+  }
+
+  .hr {
+    background: rgba( $peach, 0.5 );
+    height: 3px;
+
+    width: 3em;
+    margin: 3em auto;
+  }
+
+  .block {
+    display: inline-block;
+    box-sizing: border-box;
+
+    &.middle {
+      vertical-align: middle;
+    }
+
+    &.top {
+      vertical-align: top;
+    }
+
+    &.center {
+      text-align: center;
+    }
+  }
+
+  .col {
+    @extend .block;
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+}
+
+@include when_outputting($base) {
+  .span1of1,
+  .col { width: percentage(1); }
+}
+
+@include when_outputting($desktop) {
+  .span1of2 { width: percentage(1/2); }
+  .span1of3 { width: percentage(1/3); }
+  .span2of3 { width: percentage(2/3); }
+}
+
+@include when_outputting($base) {
+  .align-center { text-align: center; }
+
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 95vh;
+  }
+
+
+  #header {
+    padding-top: $gutter;
+    .header-img {
+      height: 66vmin;
+      min-height: 52vw;
+      background-size: cover;
+      background-position: center center;
+      background-image: url(/assets/images/header.jpg);
+    }
+  }
+}
+
+@include when_outputting($desktop) {
+  #header {
+    padding-top: 0;
+    .row {
+      position: absolute;
+      left: 0; right: 0;
+    }
+  }
+}

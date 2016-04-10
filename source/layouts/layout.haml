@@ -7,5 +7,7 @@
 
     %title= data.global.title
     = stylesheet_link_tag 'site'
+    = stylesheet_link_tag 'desktop', media: 'screen and (min-width: 640px)'
+
   %body
     = yield
