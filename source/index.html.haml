@@ -2,6 +2,13 @@
 title: Kathy & Steven | August 20th, 2016
 ---
 
+#nav
+  .nav-primary
+    %a{ href: "#section-when" } When
+    %a{ href: "#section-where" } Where
+  .nav-secondary
+    %a{ href: "#section-registry" } Registry
+
 #header
   .row
     .col.span1of1.center
@@ -10,7 +17,7 @@ title: Kathy & Steven | August 20th, 2016
         are getting married <span id="days_till_wedding"></span>
   .header-img
 
-.row
+.row#section-when
   .col.span1of1.center
     .hr
     %h2.heading When
@@ -26,7 +33,7 @@ title: Kathy & Steven | August 20th, 2016
   .col.span1of2.middle
     %img{ src: '/assets/images/other.jpg' }
 
-.row
+.row#section-where
   .col.span1of1.center
     .hr
     %h2.heading Where
@@ -36,7 +43,7 @@ title: Kathy & Steven | August 20th, 2016
   .col.span1of2.middle
     %a{ href: 'https://goo.gl/maps/kxT9vZc7oFp' }
       %img{ src: map_url }
-  .col.span1of2.middle
+  .col.span1of2.middle.center
     %p.body.i.mb2 Venue
     %a.secret{ href: 'http://www.frazercenter.org/' }
       %h3.subheading.mt0.mb0 Frazer Center
@@ -60,10 +67,24 @@ title: Kathy & Steven | August 20th, 2016
       %br
       Decatur, GA 30033
 
-    -#
-      .block.span2of3
-        %p.body
-          The ceremony will take place in the Cator Woolford Gardens, followed shortly by the reception up the hill at the Frazer Center.
+.row#section-registry
+  .col.span1of1.center
+    .hr
+    %h2.heading Registry
+    .hr
+
+.row.align-center
+  .col
+    %a{ href: 'http://www.crateandbarrel.com/gift-registry/kathy-kettlewell-and-steven-sloan/r5512397' }
+      %img.logo{ src: '/assets/images/logos/crate-barrel.png' }
+  .col
+    %a{ href: 'http://www.target.com/gift-registry/registry/XEuI2PBhSXDcCmUEyvtdKw' }
+      %img.logo{ src: '/assets/images/logos/target.png' }
+  .col
+    %a{ href: 'https://www.newlywish.com/registry/kathy-kettlewell-and-steven-sloan' }
+      %img.logo{ src: '/assets/images/logos/newlywish.png' }
+
+.row
 
 .row
 .hr
