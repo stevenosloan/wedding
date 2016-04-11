@@ -15,3 +15,15 @@ activate :autoprefixer do |config|
   config.cascade  = true
   config.inline   = false
 end
+
+helpers do
+  def map_url
+    params  = data.global.map_data.to_h.dup
+    base    = params.delete('base')
+    markers = params.delete('markers')
+
+    base + '?' +
+    params.map { |k,v| "#{k}=#{v}" }.join('&') +
+    '&markers=' + markers.map { |m| m.join('%7C') }.join('&markers=')
+  end
+end
