@@ -27,3 +27,14 @@ helpers do
     '&markers=' + markers.map { |m| m.join('%7C') }.join('&markers=')
   end
 end
+
+configure :build do
+  # Change the Compass output style for deployment
+  activate :minify_css
+
+  # Minify Javascript on build
+  activate :minify_javascript
+
+  # Enable cache buster
+  activate :asset_hash
+end
